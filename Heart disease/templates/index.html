@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+</head>
+<body><hr>
+    <h1>Heart Disease Prediction Using Naive bayes</h1><hr>
+    <div class="container-i">
+        <form action = "{{url_for('predict')}}" class="form-i" method="post">
+            Age: <input type="number" name="age" placeholder="Enter your Age " ><br><br>
+            Sex: <input type="number" name="sex" placeholder="Enter your sex"><br><br>
+            Cp: <input type="number" name="cp" placeholder="cp Value " ><br><br>
+            Trestps: <input type="number" name="trestbps" placeholder="trestbps Value" ><br><br>
+            Chol: <input type="number" name="chol" placeholder="chol Value" ><br><br>
+            fbs: <input type="number" name="fbs" placeholder="fbs" ><br><br>
+            restecg: <input type="number" name="restecg" placeholder="restecg Value" ><br><br>
+            THAL: <input type="number" name="thal" placeholder="THAL Value" ><br><br>
+
+            <!--Submit Button-->
+            <input type="submit" value="predict" class="submit">
+        </form>
+        <h3>Patient Result was : {{prediction}}</h3>
+    </div>
+    <style>
+        body{
+            text-align:center;
+            color:rgb(248, 8, 8);
+            background-image: url('/static/heart\ 1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</body>
+</html>
